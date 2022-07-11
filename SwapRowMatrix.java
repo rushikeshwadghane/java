@@ -7,24 +7,22 @@ class MyMatrix extends Matrix
     {
         super(a,b);
     }
-    public int Minimum()
+    public void  SwapRow()
     {
-        int iMin = Arr[0][0];
-        for(int i=0;i<iRow;i++)
+        int iTemp=0;
+        for(int i=0;i<iRow-1;i+=2)
         {
             for(int j=0;j<iCol;j++)
             {
-                if(Arr[i][j]<iMin)
-                {
-                    iMin = Arr[i][j];
-                }
+                iTemp = Arr[i][j];
+                Arr[i][j] = Arr[i+1][j];
+                Arr[i+1][j]=iTemp;
             }
         }
-        return iMin;
     }
 }
 
-public class MinelementArray
+public class SwapRowMatrix
  {
     public static void main(String[] args) 
     {
@@ -34,10 +32,14 @@ public class MinelementArray
         System.out.println("Enter number of Colomn:");
         int Y  = sobj.nextInt();
 
-        MyMatrix mobj = new MyMatrix(X, Y);
+        MyMatrix mobj = new MyMatrix(X,Y);
         mobj.Accept();
         mobj.Display();
-        int iret = mobj.Minimum();
-        System.out.println("Minimum element: "+iret);
+
+        mobj.SwapRow();
+        System.out.println("Data After Swaping:");
+        mobj.Display();
     }
 }
+
+
