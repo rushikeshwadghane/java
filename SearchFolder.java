@@ -24,7 +24,6 @@ class program292
         }
         catch(Exception obj)
         {
-
         }
 
     }
