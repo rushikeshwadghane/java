@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class StringFrequency {
+public class StringHashmap {
     public static void main(String[] args)
     {
         Scanner sobj = new Scanner(System.in);
@@ -23,6 +23,18 @@ public class StringFrequency {
                 hobj.put(ch,1);
             }
         }
-        System.out.println(hobj);
+        Set<Character> setobj= hobj.keySet();
+        int iMax =0;
+        char c = ' '; 
+        for(char value :setobj)
+        {
+            if(iMax <(hobj.get(value)))
+            {
+                iMax = (hobj.get(value));
+                c = value;
+            }
+        }
+        System.out.println(c +" occurs maximumum time in string ie "+iMax );
+
     }
 }
