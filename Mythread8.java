@@ -57,7 +57,7 @@ class Demo extends Thread
 
     }
 }
-class Mythread7 
+class Mythread8
 {
     public static void main(String args[]) throws Exception
     {
