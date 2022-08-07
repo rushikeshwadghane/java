@@ -44,7 +44,7 @@ class Derived extends Base
         obj.fun();
         obj.gun();
         obj.sun();
-      //  obj.run();
+       // obj.run();
 
     }    
 }

@@ -1,4 +1,4 @@
-0import java.lang.*;
+import java.lang.*;
 import java.util.*;
 
 interface MarvellousSort
@@ -30,7 +30,7 @@ class Array implements MarvellousSort
     }
 
     public void Display()
-   {
+   { int start=0,end=length-1,middle=0;
         System.out.println("Elements of the array are");
         for(int i= 0;i <Arr.length; i++)
         {
@@ -41,57 +41,35 @@ class Array implements MarvellousSort
    public void BubbleSort()
    {
         int i=0,j=0,temp=0;
+        boolean Swap = false;
         for(i=0;i<Arr.length;i++)
         {
-            for(j=i+1;j<Arr.length-i-1;j++)         
+            Swap = false;
+            for(j=0;j<Arr.length-i-1;j++)         
             {
                 if(Arr[j]>Arr[j+1])
                 {
                     temp = Arr[j];
                     Arr[j]=Arr[j+1];
                     Arr[j+1]= temp; 
+                    Swap = true;
                 }
+            }
+            if(Swap == false)
+            {
+                break;
             }
         }   
    }
+
    public void InsertionSort()
-   {
-        int i=0,j=0,selected=0;
-        for(i=0;i<Arr.length;i++)
-        {
-            for(j= i-1,selected=Arr[i];(j>=0)&&(Arr[j]>selected);j--)
-            {
-                Arr[j+1] = Arr[j];
-            }
-            Arr[j+1]= selected;
-        }
-   }
+   {}
 
    public void SelectionSort()
-   {
-       int i=0,j=0,min_index = 0,temp =0;
-       for(i=0;i<Arr.length-1;i++)
-       {
-             min_index=i;
-            for(j=i;j<Arr.length;j++)
-            {
-               
-                if(Arr[min_index]> Arr[j])
-                {
-                    min_index = j;
-                }
-            }
-                if(i!= min_index)
-                {
-                    temp = Arr[i];
-                    Arr[i]= Arr[min_index];
-                    Arr[min_index]= temp;	
-                }    
-       }
-   }
+   {}
 }
 
-class Sorting
+class BubbleSort
 {
     public static void main(String arr[])
     {
@@ -102,15 +80,9 @@ class Sorting
 
             Array aobj = new Array(size);
             aobj.Accept();
-           // aobj.Display();
-         //   aobj.BubbleSort();
-              
-         //   aobj.SelectionSort();
             aobj.Display();
-              aobj.InsertionSort();
-
+            aobj.BubbleSort();
             System.out.println("Array After Sorting:");
             aobj.Display();
-
     }
 }

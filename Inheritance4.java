@@ -6,7 +6,7 @@ class Object
     // Contents
 }
 */
-class Base      // class Base extends Object
+class  Base      // class Base extends Object
 {
     public int i;
     public int j;
