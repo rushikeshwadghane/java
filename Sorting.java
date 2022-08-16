@@ -1,4 +1,4 @@
-0import java.lang.*;
+import java.lang.*;
 import java.util.*;		
 
 interface MarvellousSort
