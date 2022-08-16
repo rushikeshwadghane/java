@@ -1,5 +1,5 @@
 0import java.lang.*;
-import java.util.*;
+import java.util.*;		
 
 interface MarvellousSort
 {
@@ -39,7 +39,7 @@ class Array implements MarvellousSort
    }
 
    public void BubbleSort()
-   {
+   { 
         int i=0,j=0,temp=0;
         for(i=0;i<Arr.length;i++)
         {
